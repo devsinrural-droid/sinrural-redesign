@@ -116,7 +116,7 @@ export default function Home() {
         <div className="container-prose flex h-20 items-center justify-between gap-6">
           <a href="/" className="flex items-center gap-3" aria-label="SinRural - Início">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="SinRural"
               width={56}
               height={56}
@@ -543,7 +543,7 @@ export default function Home() {
               <div className="md:col-span-5">
                 <div className="flex items-center gap-3 mb-5">
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.png"
                     alt="SinRural"
                     width={64}
                     height={64}
