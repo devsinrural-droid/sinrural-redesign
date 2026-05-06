@@ -218,6 +218,72 @@
   }
 }
 
+/* =========================================================================
+   Print styles — geração de PDF da apresentação /sistema
+   ========================================================================= */
+
+@media print {
+  /* Hide interactive UI */
+  .sticky,
+  [aria-label*="WhatsApp"],
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Body sem texturas pesadas pra impressão */
+  body {
+    background-image: none !important;
+    background-color: #ffffff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Cada section com id começa em nova página (exceto a primeira) */
+  section[id] {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* Primeira seção (hero) não quebra antes */
+  main > section:first-of-type,
+  body > section:first-of-type {
+    page-break-before: avoid;
+    break-before: auto;
+  }
+
+  /* Evita cortar cards ao meio */
+  article,
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"],
+  [class*="rounded-3xl"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Padding mais compacto nas seções pra caber em A4 */
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Footer junto da última section */
+  footer {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  /* Tabela de comparação não corta */
+  table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Reduz hover effects que não fazem sentido em PDF */
+  *:hover {
+    box-shadow: none !important;
+  }
+}
+
 /* WhatsApp pulse */
 @keyframes whatsapp-pulse {
   0%,

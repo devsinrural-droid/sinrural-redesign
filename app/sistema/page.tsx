@@ -260,9 +260,13 @@ export default function SistemaPage() {
             <a href="#roadmap" className="hover:text-cafe">05 · Roadmap</a>
             <a href="#vs-sindapp" className="hover:text-cafe">06 · vs SindApp</a>
           </div>
-          <span className="text-white/55 font-mono uppercase tracking-[0.16em] text-[11px]">
-            Apresentação · v1
-          </span>
+          <a
+            href="/apresentacao-sinrural.pdf"
+            download
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-vermelho text-white text-[11px] font-bold uppercase tracking-[0.16em] hover:bg-tinto transition print:hidden"
+          >
+            <span aria-hidden>⬇</span> Baixar PDF
+          </a>
         </div>
       </div>
 
@@ -755,7 +759,14 @@ export default function SistemaPage() {
             </div>
 
             <div className="mt-14 flex flex-wrap items-center gap-4">
-              <Link href="/" className="btn-primary">
+              <a
+                href="/apresentacao-sinrural.pdf"
+                download
+                className="btn-primary"
+              >
+                <span aria-hidden>⬇</span> Baixar apresentação (PDF)
+              </a>
+              <Link href="/" className="btn-secondary">
                 Voltar pra demonstração do site
               </Link>
               <a
