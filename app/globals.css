@@ -4,127 +4,237 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* =========================================================================
+   SinRural Design Tokens
+   See docs/02-design.md for the full system.
+   ========================================================================= */
+
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
+  /* — Brand verdes — */
+  --color-sinrural: #006241;          /* Heading institucional */
+  --color-pasto: #00754a;             /* CTA primário */
+  --color-mata: #1e3932;              /* Feature band, footer */
+  --color-cerrado: #2b5148;           /* Decorativo escuro */
+  --color-pasto-light: #d4e9e2;       /* Form valid wash */
+
+  /* — Cerimônia — */
+  --color-cafe: #cba258;              /* Beneficente, recordes, posse */
+  --color-cafe-light: #dfc49d;
+  --color-cafe-cream: #faf6ee;
+
+  /* — Surfaces — */
+  --color-cream: #f2f0eb;             /* Canvas principal */
+  --color-adobe: #edebe9;             /* Separadores, washes */
+  --color-associado: #33433d;         /* Texto da área do associado */
+
+  /* — Plataforma (exceção) — */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe5c;
+
+  /* — Mapeamento shadcn → SinRural — */
+  --color-background: var(--color-cream);
+  --color-foreground: rgba(0, 0, 0, 0.87);
+  --color-card: #ffffff;
+  --color-card-foreground: rgba(0, 0, 0, 0.87);
+  --color-popover: #ffffff;
+  --color-popover-foreground: rgba(0, 0, 0, 0.87);
+  --color-primary: var(--color-pasto);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-adobe);
+  --color-secondary-foreground: rgba(0, 0, 0, 0.87);
+  --color-muted: var(--color-adobe);
+  --color-muted-foreground: rgba(0, 0, 0, 0.58);
+  --color-accent: var(--color-cafe);
+  --color-accent-foreground: var(--color-mata);
+  --color-destructive: #c82014;
+  --color-border: rgba(30, 57, 50, 0.12);
+  --color-input: rgba(30, 57, 50, 0.18);
+  --color-ring: var(--color-pasto);
+
+  --color-chart-1: var(--color-sinrural);
+  --color-chart-2: var(--color-cafe);
+  --color-chart-3: var(--color-cerrado);
+  --color-chart-4: var(--color-pasto-light);
+  --color-chart-5: var(--color-associado);
+
+  --color-sidebar: var(--color-mata);
+  --color-sidebar-foreground: #ffffff;
+  --color-sidebar-primary: var(--color-pasto);
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: var(--color-cafe);
+  --color-sidebar-accent-foreground: var(--color-mata);
+  --color-sidebar-border: rgba(255, 255, 255, 0.1);
+  --color-sidebar-ring: var(--color-cafe);
+
+  /* — Tipografia — */
+  --font-sans: var(--font-bricolage), "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-fraunces), "Lora", "Iowan Old Style", Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+  --font-heading: var(--font-display);
+
+  /* — Radius — */
+  --radius: 0.75rem;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-pill: 9999px;
+
+  /* — Shadows (sussurro empilhado, ver design.md §6) — */
+  --shadow-card: 0 0 0.5px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.24);
+  --shadow-nav:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.06),
+    0 0 2px rgba(0, 0, 0, 0.07);
+  --shadow-fab:
+    0 0 6px rgba(0, 0, 0, 0.24),
+    0 8px 12px rgba(0, 0, 0, 0.14);
+  --shadow-fab-pressed: 0 0 6px rgba(0, 0, 0, 0.24), 0 8px 12px rgba(0, 0, 0, 0);
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+/* =========================================================================
+   Base layer
+   ========================================================================= */
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/60;
   }
+
+  html {
+    @apply font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
     @apply bg-background text-foreground;
+    letter-spacing: -0.005em;
+    background-image:
+      /* canto direito superior — leve halo verde */
+      radial-gradient(
+        ellipse at top right,
+        rgba(0, 98, 65, 0.04) 0%,
+        transparent 50%
+      ),
+      /* paper grain — SVG noise filter inline */
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.045 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+    background-size:
+      auto,
+      240px 240px;
+    background-attachment: fixed, scroll;
   }
-  html {
-    @apply font-sans;
+
+  ::selection {
+    background-color: var(--color-cafe);
+    color: var(--color-mata);
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  /* Fraunces variable axes — used for editorial moments */
+  .font-display {
+    font-variation-settings:
+      "opsz" 96,
+      "SOFT" 50,
+      "WONK" 1;
+  }
+
+  .font-display-body {
+    font-family: var(--font-display);
+    font-variation-settings:
+      "opsz" 14,
+      "SOFT" 20,
+      "WONK" 0;
+  }
+}
+
+/* =========================================================================
+   Utilities
+   ========================================================================= */
+
+@utility container-prose {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Pílula full-radius — todos os botões */
+@utility btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* WhatsApp pulse animation */
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 6px rgba(0, 0, 0, 0.24),
+      0 8px 12px rgba(0, 0, 0, 0.14),
+      0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  60% {
+    box-shadow:
+      0 0 6px rgba(0, 0, 0, 0.24),
+      0 8px 12px rgba(0, 0, 0, 0.14),
+      0 0 0 16px rgba(37, 211, 102, 0);
+  }
+}
+
+/* Reveal-on-load stagger */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility rise {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Cerrado horizon — decorative SVG line texture for institutional sections */
+@utility horizon-grid {
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(100% - 1px),
+      rgba(255, 255, 255, 0.06) 100%
+    );
+  background-size: 100% 3rem;
 }

@@ -4,7 +4,7 @@
 > **Por que Starbucks:** paleta verde-terra calibrada em 4 tons + canvas creme quente (não branco frio) + cerimônia em dourado + storytelling de produtor — exatamente a matriz emocional de uma entidade sindical rural com 60 anos.
 > **Adaptações deste arquivo:**
 > 1. Tokens renomeados (Starbucks → SinRural / Pasto / Mata / Café / Cal Cream / etc.)
-> 2. Typeface proprietária SoDoSans → **Inter** (Google Fonts), preservando tracking apertado `-0.16px`
+> 2. Typefaces upgrade: SoDoSans → **Bricolage Grotesque** (body, com caráter artesão) + Lander Tall → **Fraunces** (display editorial, variável com optical sizing). Inter/Lora ficam como fallback documentado.
 > 3. Floating "Frap" → **WhatsApp CTA flutuante** (canal dominante no agro)
 > 4. Exemplos de café/cup/rewards reescritos para leilão, Expass Agro, área do associado e serviços por departamento
 
@@ -14,7 +14,7 @@
 
 O sistema do SinRural é uma **entidade sindical confiante e quente**, vestindo o verde do pasto e da mata sobre cada superfície. O canvas alterna entre um creme neutro-quente (`#f2f0eb`) e um creme adobe levemente mais saturado (`#edebe9`) — cores que referenciam materiais reais do mundo do produtor: cal de curral, parede de adobe, papel de protocolo, madeira de mourão — enquanto o **SinRural Green** (`#006241`) ancora o momento institucional em hero bands, CTAs e na área do associado. Os verdes vêm em quatro tons calibrados (SinRural / Pasto / Mata / Cerrado), cada um mapeado para um papel específico de superfície, e o **Café Gold** (`#cba258`) aparece **apenas em momentos de cerimônia** — leilão beneficente HRC, recordes (ex.: Bloger FIV), posse de diretoria, homenagens — nunca como acento de uso geral.
 
-A tipografia carrega quase todo o peso da voz da marca. **Inter** (Google Fonts) atravessa praticamente toda superfície com tracking apertado `-0.16px` — lê confiante e amigável, não revista de moda severa. Em momentos editoriais específicos (história do sindicato, mensagem do presidente, manifesto "Unidos pelo Agro!", artigos longos de notícias), entra um serif quente (**Lora**) que ecoa o sentimento de carta institucional de papel timbrado. Um único uso opcional de script (**Kalam**) fica reservado para citações manuscritas em fotos de produtor — referência ao caderno de campo. Três tipos, três contextos — disciplina rígida sobre quando cada um aparece.
+A tipografia carrega quase todo o peso da voz da marca. **Bricolage Grotesque** (Google Fonts, variável) atravessa toda superfície de body, label e UI — sans humanista com leve caráter artesão (terminações ligeiramente irregulares, contrast modulado) que casa com a identidade de cooperativa/sindicato rural sem cair em tech-startup genérico. Em momentos editoriais — display de hero, manifesto "Unidos pelo Agro", história do sindicato, mensagem do presidente, lead de notícia — entra **Fraunces** (Google Fonts, variável com optical sizing, eixo SOFT e WONK), serif moderno-mas-tipograficamente-vivo que carrega autoridade institucional de 60 anos sem soar antiquado. Um terceiro uso opcional de script (**Kalam**) fica reservado para citações manuscritas em fotos de produtor — referência ao caderno de campo. Três typefaces, três contextos — disciplina rígida sobre quando cada um aparece.
 
 As superfícies respiram através de geometria arredondada. Todo botão é uma full-pill de 50px. Cards usam retângulo arredondado de 12px. O **WhatsApp Floating CTA** — botão circular de 56px com fill verde WhatsApp (`#25D366`) — é o gesto de profundidade signature do produto: flutua no bottom-right com stack de sombras em camadas (`0 0 6px rgba(0,0,0,0.24)` base + `0 8px 12px rgba(0,0,0,0.14)` ambient) e comprime via `scale(0.95)` no press. Elevações são, de resto, contidas — sombras de card ficam num sussurro de `0.14/0.24` alpha, nav global ganha um stack de três camadas baixas. O sistema todo soa como sinalização limpa de cooperativa: legível, quente, nunca grita.
 
@@ -22,8 +22,8 @@ As superfícies respiram através de geometria arredondada. Todo botão é uma f
 - Sistema de quatro verdes (SinRural / Pasto Accent / Mata / Cerrado Uplift), cada um mapeado para um papel distinto de superfície — não é um único "verde da marca"
 - Café Gold reservado para cerimônia (leilão beneficente, recordes, posse, homenagens); nunca acento genérico
 - Canvas creme-quente (`#f2f0eb` / `#edebe9`) no lugar de branco frio — referencia cal, adobe, papel de protocolo
-- Inter como voz universal, com tracking `-0.16px` consistente
-- Trocas de typeface contextualizadas: serif (Lora) para momentos editoriais (história, mensagens, manifesto, notícias longas)
+- Bricolage Grotesque como voz universal de UI/body, com tracking ligeiramente apertado pra dar densidade
+- Fraunces (serif variável) para momentos editoriais — hero, manifesto, mensagens institucionais, lead de notícias longas — com peso e optical sizing escolhidos por contexto
 - Botões full-pill (`50px` radius) universais; `scale(0.95)` ativo é a micro-interação signature
 - WhatsApp CTA flutuante (`56px` circular, fill `#25D366` exclusivo, stack de sombras) — único elemento elevado, persistente em qualquer scroll
 - Tiles de evento (Expass Agro, leilões) tratados como **fotografia de produto físico** — cada edição tem foto autoral, nunca arte gerada genérica
@@ -97,12 +97,14 @@ Sem tokens estruturais de gradient. Hierarquia de superfície é **color-block s
 
 ### Font Family
 
-- **Primary:** `Inter, "Helvetica Neue", Helvetica, Arial, sans-serif` — disponível no Google Fonts, geometric humanist, ampla escala de pesos. Substituto do SoDoSans proprietário.
-- **Loading Fallback:** `"Helvetica Neue", Helvetica, Arial, sans-serif`
-- **Editorial Serif:** `"Lora", "Iowan Old Style", Georgia, serif` — usado em momentos editoriais específicos (história institucional, mensagem do presidente, manifesto "Unidos pelo Agro", artigos longos de notícia). Quente, papel-timbrado.
-- **Caderno Script (opcional):** `"Kalam", "Comic Sans MS", cursive` — uso pontual em citações de produtor sobre fotos de campo. Fica reservado e raro.
+- **Body / UI:** `"Bricolage Grotesque", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif` — sans humanista variável (Google Fonts), eixo `wdth` 75–100, peso 200–800. Caráter artesão sutil (terminações levemente irregulares, contrast modulado) — feliz no contexto de cooperativa rural, sem cara de SaaS genérico.
+- **Display / Editorial:** `"Fraunces", "Lora", "Iowan Old Style", Georgia, serif` — serif variável (Google Fonts) com optical sizing (`opsz` 9–144) e eixos `SOFT` 0–100 e `WONK` 0–1. Em hero/manifesto, usar `opsz` alto + `SOFT` ~50 + `WONK` 1 para máxima personalidade. Em body editorial, baixar `opsz` e zerar `WONK` para legibilidade.
+- **Loading fallback:** `"Helvetica Neue", Helvetica, Arial, sans-serif`
+- **Caderno Script (opcional):** `"Kalam", "Comic Sans MS", cursive` — uso pontual em citações de produtor sobre fotos de campo.
 
-> **Observação importante sobre o tracking:** Inter precisa de `-0.005em` em vez de `-0.01em` em alguns tamanhos pra não ficar apertado demais. Tokens abaixo já preveem essa flexibilidade (`letterSpacingNormal` é semântico, não literal).
+> **Por que Bricolage + Fraunces e não Inter + Lora:** Inter e Lora são funcionais mas se tornaram o "default AI-generated" do design moderno — Inter está em metade dos sites SaaS, Lora em metade dos blogs editoriais. Bricolage Grotesque tem caráter artesão que casa com sindicato (a própria palavra "bricolage" remete a fazer-com-as-mãos). Fraunces traz autoridade tipográfica viva com optical sizing variável — em hero grande, ela ganha personalidade que Lora não tem. Nas duas escolhas, **typeface variável** pra reduzir o peso de carregamento (1 arquivo cobre todos os pesos/tamanhos).
+
+> **Tracking:** body em `-0.005em` (apertado, característico). Display Fraunces em `0` ou levemente positivo (`+0.005em`) — serif não precisa apertar.
 
 ### Hierarchy
 
@@ -140,11 +142,12 @@ Sem tokens estruturais de gradient. Hierarquia de superfície é **color-block s
 
 | Original (Starbucks) | Substituto (SinRural) | Razão |
 |---|---|---|
-| SoDoSans (proprietário) | **Inter** (Google Fonts) | Geometric humanist, mesma sensação confiante, peso 100–900 |
-| Lander Tall (proprietário) | **Lora** (Google Fonts) | Serif quente editorial; alternativa: Source Serif Pro |
-| Kalam (já no Google Fonts) | **Kalam** (mantido) | Único típo proprietary-free do trio Starbucks; fica como uso opcional |
+| SoDoSans (proprietário) | **Bricolage Grotesque** (Google Fonts, variável) | Caráter artesão, eixo `wdth` para variantes condensadas, fora do circuito "SaaS default" |
+| Lander Tall (proprietário) | **Fraunces** (Google Fonts, variável) | Optical sizing + eixos SOFT/WONK = personalidade tipográfica viva no hero, autoridade no body editorial |
+| Kalam (já no Google Fonts) | **Kalam** (mantido) | Mantido como acento manuscrito opcional |
+| Inter / Lora | **Fallback documentado** | Caso futuro Bricolage/Fraunces precisem ser descartados, esses são os substitutos funcionais |
 
-Se em algum momento decidirmos investir em typeface customizada (Inter Display variant, ou um humanist proprietário), trocar centralizadamente via `--font-primary` no token system.
+Se em algum momento decidirmos investir em typeface customizada/proprietária, trocar centralizadamente via `--font-body` e `--font-display` no token system.
 
 ---
 
