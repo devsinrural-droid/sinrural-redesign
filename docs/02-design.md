@@ -1,18 +1,16 @@
 # Sistema de Design SinRural
 
-> **Origem:** Adaptado do DESIGN.md do Starbucks (VoltAgent/awesome-design-md). Mantida a estrutura 1–9 do formato Stitch DESIGN.md.
-> **Por que Starbucks:** paleta verde-terra calibrada em 4 tons + canvas creme quente (não branco frio) + cerimônia em dourado + storytelling de produtor — exatamente a matriz emocional de uma entidade sindical rural com 60 anos.
-> **Adaptações deste arquivo:**
-> 1. Tokens renomeados (Starbucks → SinRural / Pasto / Mata / Café / Cal Cream / etc.)
-> 2. Typefaces upgrade: SoDoSans → **Bricolage Grotesque** (body, com caráter artesão) + Lander Tall → **Fraunces** (display editorial, variável com optical sizing). Inter/Lora ficam como fallback documentado.
-> 3. Floating "Frap" → **WhatsApp CTA flutuante** (canal dominante no agro)
-> 4. Exemplos de café/cup/rewards reescritos para leilão, Expass Agro, área do associado e serviços por departamento
+> **Origem da paleta:** cores extraídas diretamente do logo institucional do SinRural (`/public/logo.jpg`). Estrutura do documento (seções 1–9) segue o formato Stitch DESIGN.md.
+> **Brand mark:** triângulo vermelho `#DA251C` (alerta/peak/símbolo) sobre faixa verde `#006136` (mata/pasto/dominante institucional) com texto "SinRural · Sindicato dos Produtores Rurais de Passos".
+> **Disciplina cromática:** verde domina como surface institucional (bandas, footer, headers), vermelho aparece como accent de alta energia (CTA primário, brand mark, alerta), com creme/branco como canvas e dourado restrito a cerimônia.
+> **Tipografia:** Bricolage Grotesque (sans variável com caráter artesão) no body/UI + Fraunces (serif variável com optical sizing) em display editorial restrito.
+> **Floating CTA:** WhatsApp `#25D366` exclusivo (canal dominante no agro — ver auditoria §14).
 
 ---
 
 ## 1. Visual Theme & Atmosphere
 
-O sistema do SinRural é uma **entidade sindical confiante e quente**, vestindo o verde do pasto e da mata sobre cada superfície. O canvas alterna entre um creme neutro-quente (`#f2f0eb`) e um creme adobe levemente mais saturado (`#edebe9`) — cores que referenciam materiais reais do mundo do produtor: cal de curral, parede de adobe, papel de protocolo, madeira de mourão — enquanto o **SinRural Green** (`#006241`) ancora o momento institucional em hero bands, CTAs e na área do associado. Os verdes vêm em quatro tons calibrados (SinRural / Pasto / Mata / Cerrado), cada um mapeado para um papel específico de superfície, e o **Café Gold** (`#cba258`) aparece **apenas em momentos de cerimônia** — leilão beneficente HRC, recordes (ex.: Bloger FIV), posse de diretoria, homenagens — nunca como acento de uso geral.
+O sistema do SinRural é uma **entidade sindical de 60 anos**, com a identidade dupla do logo: triângulo **vermelho** acima da faixa **verde**. Verde escuro `#006136` domina como surface institucional (header bar, bandas, footer) — referenciando mata, pasto, lavoura. Vermelho `#DA251C` aparece como acento de alta energia: brand mark, CTA primário, indicador de alerta institucional, peak visual em momentos-chave. Canvas alterna entre creme neutro-quente (`#f2f0eb`) e branco institucional (`#ffffff`) — referência a papel de protocolo, parede de cal, ofício timbrado. **Café Gold** (`#cba258`) aparece **apenas em momentos de cerimônia** — leilão beneficente HRC, recordes (ex.: Bloger FIV), posse de diretoria, homenagens — nunca como acento de uso geral.
 
 A tipografia carrega quase todo o peso da voz da marca. **Bricolage Grotesque** (Google Fonts, variável) atravessa toda superfície de body, label e UI — sans humanista com leve caráter artesão (terminações ligeiramente irregulares, contrast modulado) que casa com a identidade de cooperativa/sindicato rural sem cair em tech-startup genérico. Em momentos editoriais — display de hero, manifesto "Unidos pelo Agro", história do sindicato, mensagem do presidente, lead de notícia — entra **Fraunces** (Google Fonts, variável com optical sizing, eixo SOFT e WONK), serif moderno-mas-tipograficamente-vivo que carrega autoridade institucional de 60 anos sem soar antiquado. Um terceiro uso opcional de script (**Kalam**) fica reservado para citações manuscritas em fotos de produtor — referência ao caderno de campo. Três typefaces, três contextos — disciplina rígida sobre quando cada um aparece.
 
@@ -36,15 +34,15 @@ As superfícies respiram através de geometria arredondada. Todo botão é uma f
 
 ## 2. Color Palette & Roles
 
-**Páginas-fonte previstas:** home, institucional (história, diretoria, missão), notícias, eventos (Expass Agro hub), leilões (calendário + detalhe), área do associado, contato, formulários de serviço por departamento.
+**Origem dos hexes:** sampleados diretamente do logo institucional (`/public/logo.jpg`) — vermelho do triângulo e verde da faixa. Demais tokens são derivados (escurecimentos, washes) ou complementares (creme, dourado de cerimônia).
 
-### Primary (Verdes)
+### Brand (par institucional do logo)
 
-- **SinRural Green** (`#006241`): O verde institucional histórico. Usado em h1, headers de seção principais (área do associado, página de departamento), e como sinal de marca dominante onde uma única cor precisa carregar peso.
-- **Pasto Accent** (`#00754A`): Verde levemente mais luminoso. Cor primária de CTA filled ("Solicitar atendimento", "Ver calendário de leilões", "Inscrever-se na Expass Agro").
-- **Mata Green** (`#1E3932`): Verde quase-preto, profundo. Footer, feature bands, surfaces escuras de cerimônia, hero institucional ("Unidos pelo Agro").
-- **Cerrado Uplift** (`#2b5148`): Verde médio-escuro secundário, usado parcamente em acentos decorativos e momentos de gradient escuro.
-- **Pasto Light** (`#d4e9e2`): Wash mint pálido para tints de form-valid e superfícies utilitárias verde-claras.
+- **Verde Sindicato** (`#006136`): O verde da faixa do logo. **Surface institucional dominante** — header bar, feature bands, footer, links importantes, headings de seção. É o mais usado em superfície grande.
+- **Verde Mata** (`#003d22`): Escurecimento do verde institucional. Footer profundo, hover de banda, sombra institucional.
+- **Verde Pasto** (`#0a8a4f`): Clareamento do verde institucional. Hover de link, badge de status positivo, success state.
+- **Vermelho Sindicato** (`#DA251C`): O vermelho do triângulo do logo. **Accent de alta energia** — CTA primário, brand mark, alerta institucional, badge de cerimônia recorde. Usar concentrado, nunca em superfície grande.
+- **Vermelho Tinto** (`#a51810`): Escurecimento do vermelho. Hover de CTA primário, estado pressed.
 
 ### Cerimônia (Dourados)
 
@@ -52,30 +50,32 @@ Uso restrito a: **leilão beneficente HRC**, **recordes** (ex.: Bloger FIV), **p
 
 - **Café Gold** (`#cba258`): Dourado base — pílulas e badges de cerimônia, callouts de recorde, selos de utilidade pública.
 - **Café Light** (`#dfc49d`): Dourado mais suave para washes de fundo em seções de cerimônia.
-- **Creme Café** (`#faf6ee`): Wash creme-dourado de superfície de página sob seções de cerimônia — amarra o dourado ao sistema neutro-quente.
+- **Creme Café** (`#faf6ee`): Wash creme-dourado de superfície de página sob seções de cerimônia.
 
 ### Surface & Background
 
-- **White** (`#ffffff`): Superfície primária de card e modal.
-- **Neutral Cool** (`#f9f9f9`): Cinza-frio sutil para dropdowns, wraps de form-card e containers utilitários quietos.
-- **Cal Cream** (`#f2f0eb`): O creme quente — **canvas primário de página**, hero bands, utility zones.
-- **Adobe Warm** (`#edebe9`): Creme um pouco mais saturado para zonas separadoras, washes de seção e bandas de cerimônia.
-- **Black** (`#000000`): Tinta profunda reservada para a faixa CTA do topo ("Área do Associado") e botões de alto contraste do nav superior.
+- **White** (`#ffffff`): Superfície primária de card, modal e seções de conteúdo.
+- **Cream** (`#f2f0eb`): Canvas alternativo creme — para hero, separadores e seções utilitárias.
+- **Cinza Institucional** (`#f4f5f6`): Cinza muito leve pra dropdowns, wraps utilitários, separadores.
+- **Adobe** (`#edebe9`): Creme levemente mais saturado pra hover de surface clara.
+- **Black** (`#000000`): Tinta profunda reservada para alto contraste pontual.
 
 ### Text
 
-- **Text Black** (`rgba(0, 0, 0, 0.87)`): Cor primária de heading e body em superfícies claras. Não é preto puro — preto a 87% para combinar com o canvas creme.
-- **Text Black Soft** (`rgba(0, 0, 0, 0.58)`): Texto secundário/metadata em superfícies claras (datas de notícia, captions, labels de form).
+- **Text Black** (`rgba(0, 0, 0, 0.87)`): Cor primária de heading e body em superfícies claras.
+- **Text Black Soft** (`rgba(0, 0, 0, 0.58)`): Texto secundário/metadata em superfícies claras (datas, captions, labels).
 - **Text White** (`rgba(255, 255, 255, 1)`): Heading/body primário em superfícies verde-escuras.
-- **Text White Soft** (`rgba(255, 255, 255, 0.70)`): Texto secundário em superfícies verde-escuras — descrições de link de footer, captions.
-- **Associado Green** (`#33433d`): Slate-verde apagado dedicado a blocos de texto da **área do associado** — leitura ligeiramente "empoeirada" que sinaliza "superfície de membro" sem usar o SinRural Green inteiro.
+- **Text White Soft** (`rgba(255, 255, 255, 0.70)`): Texto secundário em surfaces verde-escuras.
 
 ### Semântica
 
-- **Red** (`#c82014`): Erro e ação destrutiva (form inválido, cancelamento).
-- **Yellow** (`#fbbc05`): Estado de warning (boleto vencendo, prazo de inscrição).
-- **Pasto Light** (`#d4e9e2` a 33% opacity = `hsl(160 32% 87% / 33%)`): Tint de fundo de campo válido.
-- **Red Tint** (`hsl(4 82% 43% / 5%)`): Tint de campo inválido.
+> **Cuidado:** o vermelho `#DA251C` é cor de marca, não cor de erro. Para mensagens de erro/destrutivo usar tom mais escuro pra evitar confusão com brand.
+
+- **Erro** (`#a51810`): Vermelho-tinto pra erro/destrutivo (form inválido, cancelamento, exclusão). Mais escuro que o vermelho-marca.
+- **Warning** (`#cc8b00`): Amarelo-âmbar pra estado de warning (boleto vencendo, prazo de inscrição).
+- **Success** (`#0a8a4f`): Verde Pasto pra estado positivo (form válido, confirmação).
+- **Verde Pasto a 12%** = wash de campo válido.
+- **Erro a 8%** = wash de campo inválido.
 
 ### Plataforma (Exceção Documentada)
 
@@ -479,31 +479,31 @@ Whitespace carrega o sentimento de "espaço aberto, parque arejado". Padding de 
 
 ### Do
 
-- Use Cal Cream (`#f2f0eb`) ou Adobe Warm (`#edebe9`) como canvas no lugar de branco puro — o creme quente é signature
-- Mapeie os tons de verde para seu papel: SinRural Green em headings, Pasto Accent em CTAs, Mata Green em bandas profundas, Cerrado Uplift em decorativo
-- Mantenha tracking apertado em `-0.005em` / `-0.16px` em Inter ao longo de todo o sistema
-- Use radius full-pill 50px em todo botão sem exceção
-- Aplique `transform: scale(0.95)` como active state universal de botão
+- Use o **par vermelho-verde do logo** como sistema de marca: verde domina em surface institucional, vermelho concentrado em CTA primário e brand mark
+- Use **logo institucional real** no header e footer — é elemento de autoridade, não decoração
+- Use Verde Sindicato `#006136` como cor de banda, header bar, footer — é a institucional dominante
+- Use Vermelho Sindicato `#DA251C` em CTA primário, brand mark e accent — nunca em surface grande (não é cor de fundo de seção)
 - Reserve Café Gold para momentos de cerimônia (leilão beneficente, recordes, posse, homenagem)
-- Use Inter para quase tudo; mude para Lora apenas em headlines editoriais (história, mensagem do presidente, manifesto, notícia longa)
+- Mantenha tracking apertado em `-0.005em` em Bricolage Grotesque
+- Use Bricolage Grotesque pra body/UI; Fraunces apenas em display editorial chave (não em todo H2)
 - Empilhe 2–3 sombras de baixa alpha em vez de uma drop shadow pesada
 - Use o WhatsApp CTA flutuante como entrada persistente para conversa em toda superfície de scroll
-- Deixe o canvas creme respirar entre cards — use whitespace, não divisores
-- Trate cada edição da Expass Agro / cada leilão como peça fotográfica autoral, não card genérico
+- Use canvas branco ou creme — branco institucional pra surfaces densas, creme pra hero/destaque
+- Aplique `transform: scale(0.95)` como active state em CTA primário
 
 ### Don't
 
-- Não use branco puro como canvas — a temperatura creme é load-bearing pra identidade
-- Não escolha "um único verde da marca" — o sistema de quatro verdes é intencional; usar só `#006241` em tudo achata a marca
+- Não inverta o par vermelho-verde — vermelho não é surface dominante, verde não é só accent
+- Não use vermelho como background de seção grande (vira cartaz de alerta, não institucional)
+- Não combine vermelho e verde sem mediação — sempre tem branco/creme ou faixa de verde escuro entre eles pra evitar feeling de "natal"
 - Não use Café Gold como acento genérico — é sinal de cerimônia exclusivo
-- Não esquadre os cantos dos botões — pílula 50px é universal
-- Não introduza fills de gradient — o sistema é color-block ao longo de todo
-- Não contraste H1 e H2 por tamanho — hierarquia vem de peso + cor (600 SinRural Green vs 400 Text Black)
-- Não use preto puro em body text — `rgba(0,0,0,0.87)` casa com canvas quente
-- Não pule o `scale(0.95)` ativo nos botões — é micro-interação signature
+- Não desenhe um logo alternativo — o logo institucional do sindicato é o oficial; sempre usar `/public/logo.jpg` (ou versões que vierem)
+- Não use Fraunces em tudo — se aparecer em todo heading, perde força. Restrito a display de hero, manifesto, mensagens institucionais
+- Não contraste H1 e H2 por tamanho extremo — hierarquia também vem de peso + cor + spacing
+- Não use preto puro em body text — `rgba(0,0,0,0.87)` casa com canvas creme
 - Não empilhe sombras pesadas únicas; sempre layer 2–3 baixa-alpha
-- Não introduza serifs ou scripts no fluxo principal de serviço/leilão — pertencem a contexto editorial
-- Não use WhatsApp Green (`#25D366`) em nada além do CTA flutuante — quebraria a disciplina de cor
+- Não use WhatsApp Green (`#25D366`) em nada além do CTA flutuante
+- Não use o vermelho-marca pra mensagens de erro — confunde com CTA. Erro é vermelho-tinto `#a51810`
 
 ---
 
@@ -550,19 +550,18 @@ Inferidos a partir dos tokens de largura de componente e alturas progressivas de
 
 ### Quick Color Reference
 
-- CTA primário: "Pasto Accent (`#00754A`)"
-- Texto de CTA primário: "White (`#ffffff`)"
-- Heading da marca: "SinRural Green (`#006241`)"
-- Feature band / footer: "Mata Green (`#1E3932`)"
-- Canvas de página: "Cal Cream (`#f2f0eb`)"
-- Canvas de card: "White (`#ffffff`)"
-- Heading em superfície clara: "Text Black (`rgba(0,0,0,0.87)`)"
-- Body em superfície clara: "Text Black Soft (`rgba(0,0,0,0.58)`)"
-- Body em Mata Green: "Text White Soft (`rgba(255,255,255,0.70)`)"
-- Cerimônia: "Café Gold (`#cba258`)"
-- Texto da área do associado: "Associado Green (`#33433d`)"
-- Destrutivo: "Red (`#c82014`)"
-- WhatsApp CTA (uso único): "WhatsApp Green (`#25D366`)"
+- Brand mark / logo: triângulo Vermelho Sindicato `#DA251C` + faixa Verde Sindicato `#006136`
+- CTA primário: Vermelho Sindicato `#DA251C` (fill) sobre branco/creme
+- CTA secundário: Verde Sindicato `#006136` (fill) ou outlined
+- Heading institucional: Verde Sindicato `#006136`
+- Feature band / footer / header bar: Verde Sindicato `#006136` ou Verde Mata `#003d22`
+- Canvas de página: White `#ffffff` ou Cream `#f2f0eb`
+- Heading em superfície clara: Text Black `rgba(0,0,0,0.87)`
+- Body em superfície clara: Text Black Soft `rgba(0,0,0,0.58)`
+- Body em Verde Sindicato: Text White Soft `rgba(255,255,255,0.70)`
+- Cerimônia: Café Gold `#cba258`
+- Erro / destrutivo: Vermelho Tinto `#a51810` (mais escuro que o brand)
+- WhatsApp CTA (uso único): WhatsApp Green `#25D366`
 
 ### Prompts de Componente (Exemplos)
 
